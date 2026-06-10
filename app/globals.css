@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', serif;
+  --font-inter:    'Inter', sans-serif;
+
+  --ibk-bg:        #FFFFFF;
+  --ibk-surface:   #FFFFFF;
+  --ibk-alt:       #F5F7FA;
+  --ibk-ink:       #0A0A0A;
+  --ibk-muted:     #6B6560;
+  --ibk-border:    #E5E7EB;
+  --ibk-border-s:  #D1D5DB;
+
+  /* Brand accent — premium dark blue */
+  --ibk-brand:    #991B1B;
+  --ibk-brand-d:  #7F1D1D;
+  --ibk-brand-l:  #FEE2E2;
+
+  --ibk-dark:      #0F0F0F;
+  --ibk-dark-mid:  #1A1A1A;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  background: var(--ibk-bg);
+  color: var(--ibk-ink);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+::selection { background: rgba(153, 27, 27, 0.2); color: inherit; }
+::-webkit-scrollbar { display: none; }
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ============================
+   CARD
+   ============================ */
+.ibk-card {
+  background: #fff;
+  border: 1px solid var(--ibk-border);
+  border-radius: 24px;
+  transition: border-color 0.3s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+.ibk-card:hover {
+  border-color: var(--ibk-brand);
+  box-shadow: 0 16px 40px rgba(10,25,48,0.12);
+  transform: translateY(-4px);
+}
+
+/* Property card */
+.prop-card {
+  background: #fff;
+  border: 1px solid var(--ibk-border);
+  border-radius: 28px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.prop-card:hover {
+  border-color: var(--ibk-brand);
+  box-shadow: 0 20px 48px rgba(10,25,48,0.14);
+  transform: translateY(-5px);
+}
+.prop-card:hover .prop-img {
+  transform: scale(1.04);
+}
+.prop-img {
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Service card */
+.service-card {
+  background: #fff;
+  border: 1px solid var(--ibk-border);
+  border-radius: 24px;
+  border-top: 4px solid var(--ibk-brand);
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  overflow: hidden;
+}
+.service-card:hover {
+  border-color: var(--ibk-brand);
+  box-shadow: 0 16px 40px rgba(10,25,48,0.10);
+  transform: translateY(-5px);
+}
+
+/* ============================
+   BUTTONS
+   ============================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: var(--ibk-brand);
+  color: #fff;
+  font-family: var(--font-inter);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background: var(--ibk-brand-d);
+  box-shadow: 0 8px 24px rgba(10,25,48,0.3);
+  transform: translateY(-1px);
+}
+
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: var(--ibk-ink);
+  color: #fff;
+  font-family: var(--font-inter);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+.btn-dark:hover { 
+  background: var(--ibk-dark-mid); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 26px;
+  background: transparent;
+  color: var(--ibk-ink);
+  font-family: var(--font-inter);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1.5px solid var(--ibk-ink);
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover { 
+  background: var(--ibk-ink); 
+  color: #fff; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 26px;
+  background: transparent;
+  color: #fff;
+  font-family: var(--font-inter);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+.btn-outline-light:hover { 
+  border-color: #fff; 
+  background: rgba(255,255,255,0.08); 
+}
+
+/* ============================
+   INPUTS
+   ============================ */
+.ibk-input {
+  width: 100%;
+  padding: 14px 20px;
+  background: #fff;
+  border: 1px solid var(--ibk-border);
+  color: var(--ibk-ink);
+  font-family: var(--font-inter);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 14px;
+}
+.ibk-input::placeholder { color: var(--ibk-muted); opacity: 0.6; }
+.ibk-input:focus {
+  border-color: var(--ibk-brand);
+  box-shadow: 0 0 0 3px rgba(10,25,48,0.08);
+}
+
+/* ============================
+   BADGE
+   ============================ */
+.ibk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--ibk-brand-l);
+  color: var(--ibk-brand);
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+}
+
+/* ============================
+   ANIMATIONS
+   ============================ */
+@keyframes ibk-bounce {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50%       { transform: translateY(8px) translateX(-50%); }
+}
+.ibk-bounce { animation: ibk-bounce 2.2s ease-in-out infinite; }
+
+@keyframes ibk-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes ibk-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
