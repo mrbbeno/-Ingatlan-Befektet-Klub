@@ -36,7 +36,7 @@ export function Hero() {
                 transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1], delay: 0.15 }}
               >
                 <h1
-                  className="font-playfair font-bold text-[#0A0A0A] leading-[0.93] tracking-[-0.03em] pb-8"
+                  className="font-playfair font-bold italic text-[#0A0A0A] leading-[0.93] tracking-[-0.03em] pb-8"
                   style={{ fontSize: 'clamp(52px, 8vw, 116px)' }}
                 >
                   Ingatlan
@@ -67,7 +67,7 @@ export function Hero() {
                 transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1], delay: 0.39 }}
               >
                 <h1
-                  className="font-playfair font-bold text-[#0A0A0A] leading-[0.93] tracking-[-0.03em] pb-8"
+                  className="font-playfair font-bold italic text-[#0A0A0A] leading-[0.93] tracking-[-0.03em] pb-8"
                   style={{ fontSize: 'clamp(52px, 8vw, 116px)' }}
                 >
                   Klub.

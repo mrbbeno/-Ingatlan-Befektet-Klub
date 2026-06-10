@@ -106,7 +106,7 @@ export function Footer() {
       <div className="border-t border-white/5">
         <div className="max-w-[1400px] mx-auto px-8 md:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/25 text-[11px] font-inter">
-            © 2025 Ingatlan Befektető Klub. Minden jog fenntartva.
+            © 2026 Ingatlan Befektető Klub. Minden jog fenntartva.
           </p>
           <p className="text-white/25 text-[11px] font-inter">
             Demo:{' '}
