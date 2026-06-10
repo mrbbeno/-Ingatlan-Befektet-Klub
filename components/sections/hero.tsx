@@ -107,7 +107,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 32 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: 'easeOut', delay: 0.3 }}
-            className="lg:col-span-6 relative"
+            className="hidden lg:block lg:col-span-6 relative"
           >
             {/* Orange frame accent */}
             <div
