@@ -37,12 +37,8 @@ export function Navbar() {
         >
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
-            {/* Rounded logo mark */}
-            <div
-              className="w-10 h-10 bg-[#991B1B] flex items-center justify-center rounded-xl shadow-sm"
-            >
-              <span className="text-white font-playfair font-bold text-[14px]">IBK</span>
-            </div>
+            {/* Image logo */}
+            <img src="/favicon.ico" alt="IBK Logo" className="h-7 w-auto object-contain" />
             <span className="text-[#7A756E] text-[11px] font-inter tracking-[0.15em] uppercase hidden md:block">
               Ingatlan Befektető Klub
             </span>
